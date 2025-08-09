@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaitany Pinnacle Enterprises</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    /* Existing styles from the original code would be here... */
+
+    /* New styles for the distributor hover effect */
+    .distributor-card {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 8px; /* Optional: adds rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow */
+    }
+
+    .distributor-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .distributor-card .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      text-align: center;
+      padding: 10px;
+    }
+
+    .distributor-card:hover .overlay {
+      opacity: 1;
+    }
+
+    .distributor-card:hover .distributor-img {
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+<header class="header">
+  <div class="nav-container">
+    <a href="#" class="logo">
+      <video class="logo-video" autoplay muted loop playsinline>
+        <source src="images/logo.mp4" type="video/mp4" />
+      </video>
+      <span class="logo-text">Chaitany Pinnacle Enterprises</span>
+    </a>
+    <nav>
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="prod.html">Products</a></li>
+        <li><a href="about.html">Know More</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions">
+      <a href="contact.html" class="contact-btn"><i class="fas fa-phone"></i>Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1 id="hero-heading"></h1>
+    <p>Innovative solutions for sustainable and green energy</p>
+    <div class="cta-buttons">
+      <a href="prod.html" class="btn btn-primary">View Products</a>
+      <a href="about.html" class="btn btn-secondary">Learn More</a>
+    </div>
+  </div>
+</section>
+
+<section class="about section-padding" id="about">
+  <div class="container about-container">
+    <div class="about-text-box">
+      <p><b>Chaitany Pinnacle Enterprises</b> is a fast-growing solar energy solutions provider based in Lucknow, Uttar Pradesh.
+        Specializing in solar panel installations for both residential and corporate clients, we offer
+        comprehensive services that cover the entire solar energy lifecycle from site assessment, load analysis, and 
+        feasibility consultation to customized system design, procurement and certified installation. Our expert team
+        handles everything from grid connectivity, operations & maintenance services like inverter servicing, panel cleaning,
+        and remote diagnostics. For commercial and industrial clients, we offer energy audits, large-scale deployments and 
+        support for green building certifications. We proudly serve domestic, commercial, and industrial clients across 
+        urban and rural regions of Uttar Pradesh, committed to delivering reliable, sustainable solar solutions for a greener tomorrow.
+      </p>
+    </div>
+    <div class="about-video-box">
+      <video class="about-video" autoplay muted loop playsinline>
+        <source src="images/about1.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
+</section>
+
+<div style="margin-top: 4rem;"></div>
+<section class="distributor-section relative" id="Trusted">
+  <div class="distributor-overlay"></div>
+
+  <h2 class="section-title underline-heading text-white">We Deal In</h2>
+  <div class="distributor-carousel">
+    <div class="distributor-track">
+      <div class="distributor-card">
+        <img src="images/hom/1.jpg" alt="Tata Power Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+
+      
+      <div class="distributor-card">
+        <img src="images/hom/2.jpg" alt="Adani Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/3.jpg" alt="Waaree Logo" class="distributor-img" />
+        <div class="overlay">Commercial Solar Setup</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/4.jpg" alt="Loom Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/5.jpg" alt="Vikram Solar Logo" class="distributor-img" />
+        <div class="overlay">Commercial Solar Setup</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/6.jpg" alt="Tata Power Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/7.jpg" alt="Adani Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="why-us-section" id="why-us">
+  <div class="why-us-overlay">
+    <div class="container why-us-container">
+      <h2 class="section-title" style="color:white;">Why Choose Us?</h2>
+      <div class="why-us-grid">
+        <div class="why-us-box">
+          <i class="fa-solid fa-leaf"></i>
+          <h3>Sustainable Development</h3>
+          <p>We align our work with the United Nations SDGs, ensuring a green and responsible future.</p>
+        </div>
+        <div class="why-us-box">
+          <i class="fa-solid fa-handshake"></i>
+          <h3>Great Customer Service</h3>
+          <p>We believe in long-term relationships and always put our customers first.</p>
+        </div>
+        <div class="why-us-box">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Innovative Solutions</h3>
+          <p>Our team brings creativity and expertise to power efficient, customized solutions.</p>
+        </div>
+        <div class="why-us-box">
+          <i class="fa-solid fa-seedling"></i>
+          <h3>Eco-Friendly Commitment</h3>
+          <p>We promote green practices and renewable energy for a healthier planet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-contact">
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2025 Chaitany Pinnacle Enterprises.All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script src="./config.js"></script>
+<script>
+  const text = "Powering Tomorrow with Solar Energy";
+  let index = 0;
+  const speed = 100;
+  const typedElement = document.getElementById('hero-heading');
+
+  function typeText() {
+    if (index === 0) {
+      typedElement.innerHTML = "";
+    }
+
+    if (index < text.length) {
+      typedElement.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeText, speed);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', typeText);
+</script>
+</body>
+</html>

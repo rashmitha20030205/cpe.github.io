@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About Us - Chaitany Pinnacle Enterprises</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Custom Animations -->
+  <style>
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp {
+      animation: fadeInUp 1s ease forwards;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- ✅ HEADER NAVBAR START -->
+  <header class="fixed top-0 left-0 w-full bg-gradient-to-r from-white via-[#f8fffe] to-[#e8f5f2] shadow-md z-50 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <!-- Logo -->
+      <a href="index.html" class="flex items-center space-x-2">
+        <video class="w-[90px] h-[80px] object-cover" autoplay muted loop playsinline>
+          <source src="images/logo.mp4" type="video/mp4" />
+        </video>
+        <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#0a0349] to-[#0a0349] text-2xl font-['Anton'] tracking-wide drop-shadow-sm">
+          Chaitany Pinnacle Enterprises
+        </span>
+      </a>
+
+      <!-- Nav -->
+      <nav>
+        <ul class="hidden md:flex space-x-8 list-none">
+          <li><a href="index.html" class="relative text-[#0a0349] font-medium hover:bg-[#0a0349]/10 hover:-translate-y-1 px-4 py-2 rounded transition">Home</a></li>
+          <li><a href="prod.html" class="relative text-[#0a0349] font-medium hover:bg-[#0a0349]/10 hover:-translate-y-1 px-4 py-2 rounded transition">Products</a></li>
+          <li><a href="about.html" class="relative text-[#0a0349] font-medium hover:bg-[#0a0349]/10 hover:-translate-y-1 px-4 py-2 rounded transition">Know More</a></li>
+        </ul>
+      </nav>
+
+      <!-- Contact Button -->
+      <a href="contact.html"
+         class="hidden md:flex items-center gap-2 bg-gradient-to-r from-[#0a0349] to-[#0a0349] text-white px-6 py-2.5 rounded-full shadow hover:-translate-y-1 hover:shadow-lg transition">
+        <i class="fas fa-phone"></i>Contact Us
+      </a>
+    </div>
+  </header>
+  <!-- ✅ HEADER NAVBAR END -->
+<section class="relative h-[60vh] w-full overflow-hidden mt-[100px] bg-black">
+  <!-- Scrolling Images Container -->
+  <div class="absolute inset-0 flex animate-scroll items-center">
+    <!-- Repeat image multiple times for seamless loop -->
+    <img src="images/demo.png" class="h-full w-auto flex-shrink-0" />
+    <img src="images/demo1.png" class="h-full w-auto flex-shrink-0" />
+    <img src="images/demo2.png" class="h-full w-auto flex-shrink-0" />
+    <!-- Duplicate images -->
+    <img src="images/demo.png" class="h-full w-auto flex-shrink-0" />
+    <img src="images/demo1.png" class="h-full w-auto flex-shrink-0" />
+    <img src="images/demo2.png" class="h-full w-auto flex-shrink-0" />
+  </div>
+
+  <!-- Overlay -->
+  <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+    <h1 class="text-white text-4xl md:text-5xl font-bold">Know More About Us</h1>
+  </div>
+</section>
+<!-- Tailwind CSS custom animation -->
+<style>
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+  .animate-scroll {
+    animation: scroll 20s linear infinite;
+  }
+</style>
+
+<!-- Overlay Wrapper Start -->
+<div class="relative bg-cover bg-center bg-no-repeat" style="background-image:url('https://t4.ftcdn.net/jpg/12/02/17/57/360_F_1202175760_jYCY8YqD0iNpnfzEqwVUUZdOMdUt0jVD.jpg');">
+  
+  <!-- Black Overlay -->
+  <div class="absolute inset-0 bg-black opacity-80 z-0"></div>
+
+  <!-- Content inside overlay -->
+  <div class="relative z-10 max-w-5xl mx-auto py-12 px-4 text-white">
+
+
+  <!-- Animated Bullet Points Section -->
+
+    <!-- Animated Bullet Points Section -->
+<section>
+  
+  <h2 class="text-3xl font-bold mb-8 text-center underline underline-offset-8 decoration-green-600 text-white">What We Do</h2>
+  <div class="bg-black bg-opacity-50 p-6 rounded-lg">
+    <ul class="space-y-10 text-center">
+
+      <!-- 1. Site Assessment & Consultation -->
+      <li class="animate-fadeInUpLoop">
+        <div class="flex justify-center items-center gap-2">
+          <i class="fa-solid fa-toolbox text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Site Assessment & Consultation</h3>
+        </div>
+        <p class="mt-2">Feasibility, solar potential, load analysis, financial consultation.</p>
+      </li>
+
+      <!-- 2. System Design & Engineering -->
+      <li class="animate-fadeInUpLoop">
+        <div class="flex justify-center items-center gap-2">
+          <i class="fa-solid fa-cogs text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">System Design & Engineering</h3>
+        </div>
+        <p class="mt-2">Customized design, grid-tied/off-grid/hybrid, inverter & panel sizing.</p>
+      </li>
+
+      <!-- 3. Procurement & Installation -->
+      <li class="animate-fadeInUpLoop">
+        <div class="flex justify-center items-center gap-2">
+          <i class="fa-solid fa-truck-loading text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Procurement & Installation</h3>
+        </div>
+        <p class="mt-2">Supply of panels & inverters, installation, testing, and commissioning.</p>
+      </li>
+
+      <!-- 4. Grid Connectivity -->
+      <li class="animate-fadeInUpLoop">
+        <div class="flex justify-center items-center gap-2">
+          <i class="fa-solid fa-plug text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Grid Connectivity</h3>
+        </div>
+        <p class="mt-2">Net metering, DISCOM liaisoning, permissions & approvals.</p>
+      </li>
+
+      <!-- 5. Financing & Subsidy Support -->
+      <li class="animate-fadeInUpLoop">
+        <div class="flex justify-center items-center gap-2">
+          <i class="fa-solid fa-hand-holding-dollar text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Financing & Subsidy Support</h3>
+        </div>
+        <p class="mt-2">Bank loan tie-ups, government subsidies support.</p>
+      </li>
+
+      <!-- 7. Operations & Maintenance -->
+      <li class="animate-fadeInUpLoop">
+        <div class="flex justify-center items-center gap-2">
+          <i class="fa-solid fa-tools text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Operations & Maintenance</h3>
+        </div>
+        <p class="mt-2">AMCs, panel cleaning, remote diagnostics & repairs.</p>
+      </li>
+
+      <!-- 8. Corporate Services -->
+      <li class="animate-fadeInUpLoop">
+        <div class="flex justify-center items-center gap-2">
+          <i class="fa-solid fa-building text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Corporate Services</h3>
+        </div>
+        <p class="mt-2">Energy audits, large-scale deployment, green certifications.</p>
+      </li>
+
+      <!-- 9. Value-Added Services -->
+      <li class="animate-fadeInUpLoop">
+        <div class="flex justify-center items-center gap-2">
+          <i class="fa-solid fa-star text-green-600 text-2xl"></i>
+          <h3 class="text-xl font-semibold">Value-Added Services</h3>
+        </div>
+        <p class="mt-2">Insurance support, system upgrades, training sessions.</p>
+      </li>
+
+    </ul>
+  </div>
+</section>
+
+
+
+  <!-- Gap -->
+<div class="my-12"></div>
+
+<!-- Leadership Heading -->
+<h2 class="text-3xl font-bold mb-8 text-center underline underline-offset-8 decoration-green-600 text-white">Leadership</h2>
+
+<!-- Leadership Overlay Card -->
+<div class="bg-black bg-opacity-50 p-6 rounded-lg flex flex-col md:flex-row items-center gap-6">
+  <img src="images/ceo4.png"
+       alt="CEO Photo"
+       class="w-64 h-64 object-cover rounded-lg shadow-lg">
+  <div>
+    <h3 class="text-2xl font-bold mb-2">Mr. Ajit Singh</h3>
+    <p class="text-gray-200">Founder & CEO of Chaitany Pinnacle Enterprises, Mr. Singh is a B.Tech graduate with a strong focus on sustainable 
+      development.He leads the company with a clear vision to promote clean energy solutions.Step by step, he is driving the organisation towards empowering communities.
+His dedication ensures innovative growth for a greener and resilient future.</p></div>
+</div>
+
+
+<!-- Gap -->
+<div class="my-12"></div>
+
+<!-- History Heading -->
+<h2 class="text-3xl font-bold mb-8 text-center underline underline-offset-8 decoration-green-600 text-white">CPE SOLAR</h2>
+
+<!-- History Content with Logo -->
+<div class="bg-black bg-opacity-50 p-6 rounded-lg text-white max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8">
+  
+  <!-- Left: Content -->
+  <div class="md:w-2/3">
+    <p>
+      Chaitany Pinnacle Enterprises is a fast-growing solar energy solutions provider based in Lucknow, Uttar Pradesh.
+      With two years of dedicated experience, we specialise in the sale and distribution of premium solar panels from 
+      leading brands such as Tata Power Solar, Waaree, Adani Solar, Vikram Solar, and Loom Solar. Under the leadership
+      of CEO Mr. Ajit Singh, we are committed to promoting green sustainability and energy independence across urban 
+      and rural Uttar Pradesh. Registered under UPNEDA, we proudly serve domestic, commercial, and industrial clients 
+      from our base at Gulab Khera, Bijnor Road, Banthra, Lucknow-226401, empowering communities with reliable and clean 
+      solar solutions for a brighter future.
+    </p>
+  </div>
+<!-- Right: Logo Video -->
+<div class="md:w-1/3 flex justify-center">
+  <video class="w-48 h-auto object-contain rounded shadow-lg" autoplay muted loop playsinline>
+    <source src="images/logo.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+</div>
+</div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-gradient-to-br from-white via-[#f8fffe] to-[#180aa1] text-[#180aa1] text-center text-[0.95rem] border-t border-black/5 py-10 px-4">
+  <div class="max-w-2xl mx-auto">
+    
+
+
+<!-- Copyright -->
+    <div>
+      <p>&copy; 2025 Chaitany Pinnacle Enterprises. All rights reserved.</p>
+    </div>
+
+
+
+
+</footer>
+</body>
+</html>
