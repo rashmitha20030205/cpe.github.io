@@ -8,8 +8,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
   <style>
-    /* Existing styles from the original code would be here... */
-
     /* Hamburger styles */
     .hamburger {
       display: none;
@@ -35,9 +33,11 @@
     .mobile-nav {
       display: none;
       position: fixed;
-      top: 0; left: 0; right: 0;
-      background: rgba(255,255,255,0.98);
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      top: 0;
+      left: 0;
+      right: 0;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
       z-index: 1001;
       padding-top: 70px;
       text-align: center;
@@ -48,8 +48,8 @@
       animation: fadeInDown 0.3s;
     }
     @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-30px);}
-      to { opacity: 1; transform: translateY(0);}
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
     .mobile-nav ul {
       list-style: none;
@@ -79,13 +79,12 @@
       font-weight: 600;
       font-size: 1rem;
       text-decoration: none;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
       transition: background 0.2s;
     }
     .mobile-nav .contact-btn i {
       margin-right: 8px;
     }
-
     /* Responsive nav */
     @media (max-width: 900px) {
       .nav-menu, .nav-actions {
@@ -106,8 +105,7 @@
         font-size: 1rem;
       }
     }
-
-    /* New styles for the distributor hover effect */
+    /* Distributor hover effect */
     .distributor-card {
       position: relative;
       cursor: pointer;
@@ -149,7 +147,6 @@
   </style>
 </head>
 <body>
-
 <header class="header">
   <div class="nav-container" style="display: flex; align-items: center; justify-content: space-between;">
     <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
@@ -172,25 +169,28 @@
         <i class="fas fa-phone"></i>Contact Us
       </a>
     </div>
-    <!-- Hamburger for mobile -->
     <button class="hamburger" id="hamburger" aria-label="Open navigation">
       <span></span>
       <span></span>
       <span></span>
     </button>
   </div>
-  <!-- Mobile nav overlay -->
-  <nav class="mobile-nav" id="mobileNav">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="prod.html">Products</a></li>
-      <li><a href="about.html">Know More</a></li>
-    </ul>
-    <a href="contact.html" class="contact-btn"><i class="fas fa-phone"></i>Contact Us</a>
-    <div style="height: 40px;"></div> <!-- Add this for extra white space -->
-  </nav>
 </header>
-
+<div class="phone-bar">
+  <a href="tel:+917985514545">
+    <i class="fas fa-phone"></i>
+    +91 7985514545
+  </a>
+</div>
+<nav class="mobile-nav" id="mobileNav">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="prod.html">Products</a></li>
+    <li><a href="about.html">Know More</a></li>
+  </ul>
+  <a href="contact.html" class="contact-btn"><i class="fas fa-phone"></i>Contact Us</a>
+  <div style="height: 40px;"></div>
+</nav>
 <section class="hero">
   <div class="hero-content">
     <h1 id="hero-heading"></h1>
@@ -201,19 +201,10 @@
     </div>
   </div>
 </section>
-
 <section class="about section-padding" id="about">
   <div class="container about-container">
     <div class="about-text-box">
-      <p><b>Chaitany Pinnacle Enterprises</b> is a fast-growing solar energy solutions provider based in Lucknow, Uttar Pradesh.
-        Specializing in solar panel installations for both residential and corporate clients, we offer
-        comprehensive services that cover the entire solar energy lifecycle from site assessment, load analysis, and 
-        feasibility consultation to customized system design, procurement and certified installation. Our expert team
-        handles everything from grid connectivity, operations & maintenance services like inverter servicing, panel cleaning,
-        and remote diagnostics. For commercial and industrial clients, we offer energy audits, large-scale deployments and 
-        support for green building certifications. We proudly serve domestic, commercial, and industrial clients across 
-        urban and rural regions of Uttar Pradesh, committed to delivering reliable, sustainable solar solutions for a greener tomorrow.
-      </p>
+      <p><b>Chaitany Pinnacle Enterprises</b> is a fast-growing solar energy solutions provider based in Lucknow, Uttar Pradesh. Specializing in solar panel installations for both residential and corporate clients, we offer comprehensive services that cover the entire solar energy lifecycle from site assessment, load analysis, and feasibility consultation to customized system design, procurement and certified installation. Our expert team handles everything from grid connectivity, operations & maintenance services like inverter servicing, panel cleaning, and remote diagnostics. For commercial and industrial clients, we offer energy audits, large-scale deployments and support for green building certifications. We proudly serve domestic, commercial, and industrial clients across urban and rural regions of Uttar Pradesh, committed to delivering reliable, sustainable solar solutions for a greener tomorrow.</p>
     </div>
     <div class="about-video-box">
       <video class="about-video" autoplay muted loop playsinline>
@@ -222,11 +213,9 @@
     </div>
   </div>
 </section>
-
 <div style="margin-top: 4rem;"></div>
 <section class="distributor-section relative" id="Trusted">
   <div class="distributor-overlay"></div>
-
   <h2 class="section-title underline-heading text-white">We Deal In</h2>
   <div class="distributor-carousel">
     <div class="distributor-track">
@@ -261,7 +250,6 @@
     </div>
   </div>
 </section>
-
 <section class="why-us-section" id="why-us">
   <div class="why-us-overlay">
     <div class="container why-us-container">
@@ -291,17 +279,14 @@
     </div>
   </div>
 </section>
-
 <footer>
   <div class="footer-container">
-    <div class="footer-contact">
-    </div>
+    <div class="footer-contact"></div>
     <div class="footer-copy">
-      <p>&copy; 2025 Chaitany Pinnacle Enterprises.All rights reserved.</p>
+      <p>&copy; 2025 Chaitany Pinnacle Enterprises. All rights reserved.</p>
     </div>
   </div>
 </footer>
-
 <script src="./config.js"></script>
 <script>
   const text = "Powering Tomorrow with Solar Energy";
@@ -313,20 +298,18 @@
     if (index === 0) {
       typedElement.innerHTML = "";
     }
-
     if (index < text.length) {
       typedElement.innerHTML += text.charAt(index);
       index++;
       setTimeout(typeText, speed);
     }
   }
-
   document.addEventListener('DOMContentLoaded', typeText);
 
-  // Hamburger menu logic
   const hamburger = document.getElementById('hamburger');
   const mobileNav = document.getElementById('mobileNav');
   let navOpen = false;
+
   hamburger.addEventListener('click', function() {
     navOpen = !navOpen;
     if (navOpen) {
@@ -337,7 +320,7 @@
       document.body.style.overflow = '';
     }
   });
-  // Close mobile nav on link click
+
   document.querySelectorAll('.mobile-nav a').forEach(link => {
     link.addEventListener('click', () => {
       mobileNav.classList.remove('open');
@@ -345,7 +328,7 @@
       navOpen = false;
     });
   });
-  // Optional: close nav if window resized to desktop
+
   window.addEventListener('resize', () => {
     if (window.innerWidth > 900) {
       mobileNav.classList.remove('open');
