@@ -187,10 +187,13 @@ box-shadow: 0 5px 15px rgba(0,184,148,0.4);
   text-decoration: underline;
 }
 
-/* Adjusted position for mobile header height */
+/* Adjusted padding for hero section to prevent overlap on mobile */
 @media (max-width: 900px) {
   .phone-bar {
     top: 60px;
+  }
+  .hero {
+    padding-top: 105px; /* Adjust this value as needed based on the combined height of your header and phone bar on mobile */
   }
 }
 
