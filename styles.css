@@ -193,7 +193,7 @@ box-shadow: 0 5px 15px rgba(0,184,148,0.4);
     top: 60px;
   }
   .hero {
-    padding-top: 105px; /* Adjust this value as needed based on the combined height of your header and phone bar on mobile */
+    padding-top: 125px; /* Increased padding to account for both header and phone bar */
   }
 }
 
