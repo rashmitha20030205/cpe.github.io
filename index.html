@@ -1,169 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chaitany Pinnacle Enterprises</title>
-<link rel="stylesheet" href="styles.css">
-<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chaitany Pinnacle Enterprises</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    /* Existing styles from the original code would be here... */
+
+    /* Hamburger styles */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      cursor: pointer;
+      z-index: 1002;
+      background: none;
+      border: none;
+    }
+    .hamburger span {
+      height: 4px;
+      width: 28px;
+      background: #0a0349;
+      margin: 4px 0;
+      border-radius: 2px;
+      display: block;
+      transition: 0.3s;
+    }
+    /* Mobile nav overlay */
+    .mobile-nav {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: rgba(255,255,255,0.98);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      z-index: 1001;
+      padding-top: 70px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+    .mobile-nav.open {
+      display: block;
+      animation: fadeInDown 0.3s;
+    }
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px);}
+      to { opacity: 1; transform: translateY(0);}
+    }
+    .mobile-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .mobile-nav ul li {
+      margin: 18px 0;
+    }
+    .mobile-nav ul li a {
+      color: #0a0349;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .mobile-nav ul li a:hover {
+      color: #00b894;
+    }
+    .mobile-nav .contact-btn {
+      display: inline-block;
+      margin-top: 18px;
+      padding: 10px 28px;
+      background: linear-gradient(90deg, #00b894, #0a0349);
+      color: #fff;
+      border-radius: 9999px;
+      font-weight: 600;
+      font-size: 1rem;
+      text-decoration: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      transition: background 0.2s;
+    }
+    .mobile-nav .contact-btn i {
+      margin-right: 8px;
+    }
+
+    /* Responsive nav */
+    @media (max-width: 900px) {
+      .nav-menu, .nav-actions {
+        display: none !important;
+      }
+      .hamburger {
+        display: flex;
+      }
+      .logo-text {
+        font-size: 1.1rem !important;
+      }
+    }
+    @media (max-width: 600px) {
+      .logo-text {
+        font-size: 0.95rem !important;
+      }
+      .mobile-nav ul li a {
+        font-size: 1rem;
+      }
+    }
+
+    /* New styles for the distributor hover effect */
+    .distributor-card {
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+    .distributor-img {
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+    .distributor-card .overlay {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100%;
+      width: 100%;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1rem;
+      text-align: center;
+      padding: 10px;
+    }
+    .distributor-card:hover .overlay {
+      opacity: 1;
+    }
+    .distributor-card:hover .distributor-img {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 <body>
 
 <header class="header">
-<div class="nav-container">
-<a href="#" class="logo">
-<video class="logo-video" autoplay muted loop playsinline>
-<source src="images/logo.mp4" type="video/mp4" />
-</video>
-<span class="logo-text">Chaitany Pinnacle Enterprises</span>
-</a>
-<nav>
-<ul class="nav-menu">
-<li><a href="index.html">Home</a></li>
-<li><a href="prod.html">Products</a></li>
-<li><a href="about.html">Know More</a></li>
-</ul>
-</nav>
-<div class="nav-actions">
-<a href="contact.html" class="contact-btn"><i class="fas fa-phone"></i>Contact Us</a>
-</div>
-</div>
+  <div class="nav-container" style="display: flex; align-items: center; justify-content: space-between;">
+    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 10px;">
+      <video class="logo-video" style="width:48px;height:48px;object-fit:cover;" autoplay muted loop playsinline>
+        <source src="images/logo.mp4" type="video/mp4" />
+      </video>
+      <span class="logo-text" style="font-family:'Anton',sans-serif; font-size:1.35rem; color:#0a0349; font-weight:700; letter-spacing:1px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+        Chaitany Pinnacle Enterprises
+      </span>
+    </a>
+    <nav>
+      <ul class="nav-menu" style="display: flex; gap: 2.5rem; list-style: none; margin: 0; align-items: center;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="prod.html">Products</a></li>
+        <li><a href="about.html">Know More</a></li>
+      </ul>
+    </nav>
+    <div class="nav-actions" style="display: flex; align-items: center;">
+      <a href="contact.html" class="contact-btn" style="background: linear-gradient(90deg, #00b894, #0a0349); color: #fff; padding: 10px 28px; border-radius: 9999px; font-weight: 600; font-size: 1rem; text-decoration: none; display: flex; align-items: center; gap: 8px;">
+        <i class="fas fa-phone"></i>Contact Us
+      </a>
+    </div>
+    <!-- Hamburger for mobile -->
+    <button class="hamburger" id="hamburger" aria-label="Open navigation">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <!-- Mobile nav overlay -->
+  <nav class="mobile-nav" id="mobileNav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="prod.html">Products</a></li>
+      <li><a href="about.html">Know More</a></li>
+    </ul>
+    <a href="contact.html" class="contact-btn"><i class="fas fa-phone"></i>Contact Us</a>
+  </nav>
 </header>
 
-<div class="phone-bar">
-<a href="tel:+917985514545">
-<i class="fas fa-phone"></i>
-+91 7985514545
-</a>
-</div>
-
 <section class="hero">
-<div class="hero-content">
-<h1 id="hero-heading"></h1>
-<p>Innovative solutions for sustainable and green energy</p>
-<div class="cta-buttons">
-<a href="prod.html" class="btn btn-primary">View Products</a>
-<a href="about.html" class="btn btn-secondary">Learn More</a>
-</div>
-</div>
+  <div class="hero-content">
+    <h1 id="hero-heading"></h1>
+    <p>Innovative solutions for sustainable and green energy</p>
+    <div class="cta-buttons">
+      <a href="prod.html" class="btn btn-primary">View Products</a>
+      <a href="about.html" class="btn btn-secondary">Learn More</a>
+    </div>
+  </div>
 </section>
 
 <section class="about section-padding" id="about">
-<div class="container about-container">
-<div class="about-text-box">
-<p><b>Chaitany Pinnacle Enterprises</b> is a fast-growing solar energy solutions provider based in Lucknow, Uttar Pradesh.
-Specializing in solar panel installations for both residential and corporate clients, we offer
-comprehensive services that cover the entire solar energy lifecycle from site assessment, load analysis, and
-feasibility consultation to customized system design, procurement and certified installation. Our expert team
-handles everything from grid connectivity, operations & maintenance services like inverter servicing, panel cleaning,
-and remote diagnostics. For commercial and industrial clients, we offer energy audits, large-scale deployments and
-support for green building certifications. We proudly serve domestic, commercial, and industrial clients across
-urban and rural regions of Uttar Pradesh, committed to delivering reliable, sustainable solar solutions for a greener tomorrow.
-</p>
-</div>
-<div class="about-video-box">
-<video class="about-video" autoplay muted loop playsinline>
-<source src="images/about1.mp4" type="video/mp4" />
-</video>
-</div>
-</div>
+  <div class="container about-container">
+    <div class="about-text-box">
+      <p><b>Chaitany Pinnacle Enterprises</b> is a fast-growing solar energy solutions provider based in Lucknow, Uttar Pradesh.
+        Specializing in solar panel installations for both residential and corporate clients, we offer
+        comprehensive services that cover the entire solar energy lifecycle from site assessment, load analysis, and 
+        feasibility consultation to customized system design, procurement and certified installation. Our expert team
+        handles everything from grid connectivity, operations & maintenance services like inverter servicing, panel cleaning,
+        and remote diagnostics. For commercial and industrial clients, we offer energy audits, large-scale deployments and 
+        support for green building certifications. We proudly serve domestic, commercial, and industrial clients across 
+        urban and rural regions of Uttar Pradesh, committed to delivering reliable, sustainable solar solutions for a greener tomorrow.
+      </p>
+    </div>
+    <div class="about-video-box">
+      <video class="about-video" autoplay muted loop playsinline>
+        <source src="images/about1.mp4" type="video/mp4" />
+      </video>
+    </div>
+  </div>
 </section>
 
 <div style="margin-top: 4rem;"></div>
 <section class="distributor-section relative" id="Trusted">
-<div class="distributor-overlay"></div>
-<h2 class="section-title underline-heading text-white">We Deal In</h2>
-<div class="distributor-carousel">
-<div class="distributor-track">
-<div class="distributor-card">
-<img src="images/hom/1.jpg" alt="Tata Power Solar Logo" class="distributor-img" />
-<div class="overlay">Tata Power Solar</div>
-</div>
-<div class="distributor-card">
-<img src="images/hom/2.jpg" alt="Adani Solar Logo" class="distributor-img" />
-<div class="overlay">Adani Solar</div>
-</div>
-<div class="distributor-card">
-<img src="images/hom/3.jpg" alt="Waaree Logo" class="distributor-img" />
-<div class="overlay">Waaree</div>
-</div>
-<div class="distributor-card">
-<img src="images/hom/4.jpg" alt="Loom Solar Logo" class="distributor-img" />
-<div class="overlay">Loom Solar</div>
-</div>
-<div class="distributor-card">
-<img src="images/hom/5.jpg" alt="Vikram Solar Logo" class="distributor-img" />
-<div class="overlay">Vikram Solar</div>
-</div>
-<div class="distributor-card">
-<img src="images/hom/6.jpg" alt="Tata Power Solar Logo" class="distributor-img" />
-<div class="overlay">Tata Power Solar</div>
-</div>
-<div class="distributor-card">
-<img src="images/hom/7.jpg" alt="Adani Solar Logo" class="distributor-img" />
-<div class="overlay">Adani Solar</div>
-</div>
-</div>
-</div>
+  <div class="distributor-overlay"></div>
+
+  <h2 class="section-title underline-heading text-white">We Deal In</h2>
+  <div class="distributor-carousel">
+    <div class="distributor-track">
+      <div class="distributor-card">
+        <img src="images/hom/1.jpg" alt="Tata Power Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/2.jpg" alt="Adani Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/3.jpg" alt="Waaree Logo" class="distributor-img" />
+        <div class="overlay">Commercial Solar Setup</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/4.jpg" alt="Loom Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/5.jpg" alt="Vikram Solar Logo" class="distributor-img" />
+        <div class="overlay">Commercial Solar Setup</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/6.jpg" alt="Tata Power Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+      <div class="distributor-card">
+        <img src="images/hom/7.jpg" alt="Adani Solar Logo" class="distributor-img" />
+        <div class="overlay">Industrial Solar</div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section class="why-us-section" id="why-us">
-<div class="why-us-overlay">
-<div class="container why-us-container">
-<h2 class="section-title" style="color:white;">Why Choose Us?</h2>
-<div class="why-us-grid">
-<div class="why-us-box">
-<i class="fa-solid fa-leaf"></i>
-<h3>Sustainable Development</h3>
-<p>We align our work with the United Nations SDGs, ensuring a green and responsible future.</p>
-</div>
-<div class="why-us-box">
-<i class="fa-solid fa-handshake"></i>
-<h3>Great Customer Service</h3>
-<p>We believe in long-term relationships and always put our customers first.</p>
-</div>
-<div class="why-us-box">
-<i class="fa-solid fa-lightbulb"></i>
-<h3>Innovative Solutions</h3>
-<p>Our team brings creativity and expertise to power efficient, customized solutions.</p>
-</div>
-<div class="why-us-box">
-<i class="fa-solid fa-seedling"></i>
-<h3>Eco-Friendly Commitment</h3>
-<p>We promote green practices and renewable energy for a healthier planet.</p>
-</div>
-</div>
-</div>
-</div>
+  <div class="why-us-overlay">
+    <div class="container why-us-container">
+      <h2 class="section-title" style="color:white;">Why Choose Us?</h2>
+      <div class="why-us-grid">
+        <div class="why-us-box">
+          <i class="fa-solid fa-leaf"></i>
+          <h3>Sustainable Development</h3>
+          <p>We align our work with the United Nations SDGs, ensuring a green and responsible future.</p>
+        </div>
+        <div class="why-us-box">
+          <i class="fa-solid fa-handshake"></i>
+          <h3>Great Customer Service</h3>
+          <p>We believe in long-term relationships and always put our customers first.</p>
+        </div>
+        <div class="why-us-box">
+          <i class="fa-solid fa-lightbulb"></i>
+          <h3>Innovative Solutions</h3>
+          <p>Our team brings creativity and expertise to power efficient, customized solutions.</p>
+        </div>
+        <div class="why-us-box">
+          <i class="fa-solid fa-seedling"></i>
+          <h3>Eco-Friendly Commitment</h3>
+          <p>We promote green practices and renewable energy for a healthier planet.</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <footer>
-<div class="footer-container">
-<div class="footer-contact"></div>
-<div class="footer-copy">
-<p>&copy; 2025 Chaitany Pinnacle Enterprises. All rights reserved.</p>
-</div>
-</div>
+  <div class="footer-container">
+    <div class="footer-contact">
+    </div>
+    <div class="footer-copy">
+      <p>&copy; 2025 Chaitany Pinnacle Enterprises.All rights reserved.</p>
+    </div>
+  </div>
 </footer>
 
 <script src="./config.js"></script>
 <script>
-const text = "Powering Tomorrow with Solar Energy";
-let index = 0;
-const speed = 100;
-const typedElement = document.getElementById('hero-heading');
-function typeText() {
-if (index === 0) {
-typedElement.innerHTML = "";
-}
-if (index < text.length) {
-typedElement.innerHTML += text.charAt(index);
-index++;
-setTimeout(typeText, speed);
-}
-}
-document.addEventListener('DOMContentLoaded', typeText);
+  const text = "Powering Tomorrow with Solar Energy";
+  let index = 0;
+  const speed = 100;
+  const typedElement = document.getElementById('hero-heading');
+
+  function typeText() {
+    if (index === 0) {
+      typedElement.innerHTML = "";
+    }
+
+    if (index < text.length) {
+      typedElement.innerHTML += text.charAt(index);
+      index++;
+      setTimeout(typeText, speed);
+    }
+  }
+
+  document.addEventListener('DOMContentLoaded', typeText);
+
+  // Hamburger menu logic
+  const hamburger = document.getElementById('hamburger');
+  const mobileNav = document.getElementById('mobileNav');
+  let navOpen = false;
+  hamburger.addEventListener('click', function() {
+    navOpen = !navOpen;
+    if (navOpen) {
+      mobileNav.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    } else {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+    }
+  });
+  // Close mobile nav on link click
+  document.querySelectorAll('.mobile-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      navOpen = false;
+    });
+  });
+  // Optional: close nav if window resized to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 900) {
+      mobileNav.classList.remove('open');
+      document.body.style.overflow = '';
+      navOpen = false;
+    }
+  });
 </script>
 </body>
 </html>
