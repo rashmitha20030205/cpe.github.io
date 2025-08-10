@@ -274,10 +274,10 @@
 
       <!-- Contact Form -->
       <div class="bg-white bg-opacity-90 text-black rounded-xl p-6 shadow-md">
-        <form action="https://formsubmit.co/rashmithasevip@gmail.com" method="POST" class="space-y-4">
+        <form id="contactForm" action="https://formsubmit.co/rashmithasevip@gmail.com" method="POST" class="space-y-4">
           <input type="hidden" name="_captcha" value="false" />
           <input type="hidden" name="_template" value="table" />
-          <input type="hidden" name="_next" value="https://YOUR_DOMAIN/contact.html?submitted=true" />
+          <input type="hidden" name="_next" value="https://www.chaitanypinnacle.com/" />
           <input type="hidden" name="_replyto" value="email" />
           <input type="hidden" name="_subject" value="New Request from Cp Solar Website!" />
           <input type="text" name="_gotcha" style="display:none" />
@@ -343,25 +343,33 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', function() {
-      const urlParams = new URLSearchParams(window.location.search);
-      const submitted = urlParams.get('submitted');
-      const successModal = document.getElementById('successModal');
-      const closeModalButton = document.getElementById('closeModal');
-
-      if (submitted === 'true') {
-        successModal.classList.add('show');
-        window.history.replaceState({}, document.title, window.location.pathname);
+      const form = document.getElementById('contactForm');
+      const modal = document.getElementById('successModal');
+      const closeBtn = document.getElementById('closeModal');
+      if(form) {
+        form.addEventListener('submit', function(e) {
+          e.preventDefault();
+          const data = new FormData(form);
+          fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          }).then(response => {
+            form.reset();
+            form.style.display = 'none';
+            modal.classList.add('show');
+            setTimeout(function() {
+              window.location.href = "index.html"; // Change to your homepage if needed
+            }, 3000);
+          }).catch(error => {
+            alert("There was a problem submitting your form. Please try again.");
+          });
+        });
+        closeBtn.addEventListener('click', function() {
+          modal.classList.remove('show');
+          window.location.href = "index.html"; // Change to your homepage if needed
+        });
       }
-
-      closeModalButton.addEventListener('click', function() {
-        successModal.classList.remove('show');
-      });
-
-      successModal.addEventListener('click', function(event) {
-        if (event.target === successModal) {
-          successModal.classList.remove('show');
-        }
-      });
     });
   </script>
 </body>
