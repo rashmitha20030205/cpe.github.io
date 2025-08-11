@@ -520,14 +520,15 @@ display: none;
 
   .about-container {
     flex-direction: column;
-    gap: 0; /* Removing the gap completely */
-    margin: 2rem auto; /* Centering the container and providing some vertical space */
+    gap: 0;
+    margin: 2rem auto;
   }
 
   .about-video-box {
-    width: 90%; /* Match the width of the hero content box */
+    width: 90%;
     height: auto;
-    max-height: 280px; /* Increased height for better mobile view */
+    max-height: 250px;
+    margin-bottom: 0.5rem; /* Reduced margin to minimize gap */
   }
 
   .about-video {
@@ -536,11 +537,8 @@ display: none;
   }
 
   .about-text-box {
-    width: 90%; /* Match the width of the hero content box */
+    width: 90%;
     padding: 1.5rem;
-    margin-top: -50px; /* Pulling the text box up to reduce the gap */
-    z-index: 1; /* Bringing the text box forward to overlap slightly with the video */
-    position: relative; /* Making it relative to use z-index */
   }
 
   .why-us-grid {
