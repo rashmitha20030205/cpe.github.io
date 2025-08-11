@@ -162,7 +162,7 @@ box-shadow: 0 5px 15px rgba(0,184,148,0.4);
 }
 /* New phone bar styles */
 .phone-bar {
- display: block; /* Visible on all screens */
+display: block; /* Visible on all screens */
  position: fixed;
  top: 80px; /* Positioned below the header */
  left: 0;
@@ -174,7 +174,7 @@ box-shadow: 0 5px 15px rgba(0,184,148,0.4);
  z-index: 1001; /* Z-index is now higher than the header */
 }
 .phone-bar a {
- color: white;
+color: white;
  text-decoration: none;
  font-weight: bold;
  font-size: 1.2rem;
@@ -466,82 +466,92 @@ display: none;
 /* Responsive */
 @media (max-width: 900px) {
   .hero-content {
-    max-width: none; /* Resetting max-width for smaller screens */
-    width: 90%; /* Setting a specific width */
-    left: 50%; /* Center the box */
-    transform: translate(-50%, -50%); /* Center the box */
+    max-width: none;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    top: 50%;
   }
 
   .cta-buttons {
     display: flex;
-    justify-content: center; /* Center the buttons */
-    gap: 1rem; /* Maintain gap between buttons */
-    flex-direction: row; /* Keep buttons side-by-side */
-    flex-wrap: wrap; /* Allow buttons to wrap if needed */
+    justify-content: center;
+    gap: 1rem;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 
   .hero-content h1 {
     font-size: 2.5rem;
   }
+}
 
-  /* Specific changes for the video on mobile */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: linear-gradient(135deg, #ffffff 0%, #f8fffe 30%, #e8f5f2 100%);
+    flex-direction: column;
+    padding: 1rem 2rem;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-container {
+    flex-wrap: wrap;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+  }
+
   .about-container {
     flex-direction: column;
-    align-items: center;
+    gap: 1.5rem; /* Reduced the gap between the video and text box */
   }
 
   .about-video-box {
     width: 90%; /* Match the width of the hero content box */
     height: auto;
-    margin-bottom: 1rem; /* Reduce the gap */
+    max-height: 250px; /* Increased height for better mobile view */
   }
 
   .about-video {
-    width: 100%; /* Make video fill its container */
-    max-height: 250px; /* Increase height for a better mobile view */
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-text-box {
+    width: 90%; /* Match the width of the hero content box */
+  }
+
+  .why-us-grid {
+    grid-template-columns: 1fr;
   }
 }
-@media (max-width: 768px) {
-.nav-menu {
-display: none;
-position: absolute;
-top: 100%;
-left: 0;
-right: 0;
-background: linear-gradient(135deg, #ffffff 0%, #f8fffe 30%, #e8f5f2 100%);
-flex-direction: column;
-padding: 1rem 2rem;
-}
-.nav-menu.active {
-display: flex;
-}
-.nav-container {
-flex-wrap: wrap;
-}
-.hero h1 {
-font-size: 2.5rem;
-}
-.hero p {
-font-size: 1.1rem;
-}
-.cta-buttons {
-flex-direction: column;
-}
-.about-container {
-flex-direction: column;
-}
-.why-us-grid {
-grid-template-columns: 1fr;
-}
-}
 @media (max-width: 480px) {
-.hero h1 {
-font-size: 2rem;
-}
-.section-title {
-font-size: 2rem;
-}
-.logo-text {
-font-size: 1.3rem;
-}
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .logo-text {
+    font-size: 1.3rem;
+  }
 }
