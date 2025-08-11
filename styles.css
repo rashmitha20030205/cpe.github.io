@@ -179,18 +179,18 @@ box-shadow: 0 5px 15px rgba(0,184,148,0.4);
  font-weight: bold;
  font-size: 1.2rem;
  display: flex;
-  justify-content: center;
-align-items: center;
+ justify-content: center;
+ align-items: center;
  gap: 10px;
 }
 .phone-bar a:hover {
-text-decoration: underline;
+ text-decoration: underline;
 }
 
 /* Adjusted padding for hero section to prevent overlap on mobile */
 @media (max-width: 900px) {
- .phone-bar {
-top: 60px;
+.phone-bar {
+ top: 60px;
  }
  .hero {
  padding-top: 125px; /* Increased padding to account for both header and phone bar */
@@ -482,6 +482,23 @@ display: none;
 
   .hero-content h1 {
     font-size: 2.5rem;
+  }
+
+  /* Specific changes for the video on mobile */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about-video-box {
+    width: 90%; /* Match the width of the hero content box */
+    height: auto;
+    margin-bottom: 1rem; /* Reduce the gap */
+  }
+
+  .about-video {
+    width: 100%; /* Make video fill its container */
+    max-height: 250px; /* Increase height for a better mobile view */
   }
 }
 @media (max-width: 768px) {
