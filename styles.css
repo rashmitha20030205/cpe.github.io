@@ -278,7 +278,7 @@ height: auto;
 border-radius: var(--border-radius-small);
 box-shadow: var(--shadow-light);
 object-fit: cover;
-max-height: 400px;
+max-height: 600px;
 }
 
 /* Section title */
