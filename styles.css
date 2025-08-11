@@ -162,25 +162,25 @@ box-shadow: 0 5px 15px rgba(0,184,148,0.4);
 }
 /* New phone bar styles */
 .phone-bar {
-display: block; /* Visible on all screens */
-position: fixed;
-top: 80px; /* Positioned below the header */
-left: 0;
-width: 100%;
-background-color: rgba(0, 0, 0, 0.7);
+ display: block; /* Visible on all screens */
+ position: fixed;
+ top: 80px; /* Positioned below the header */
+ left: 0;
+ width: 100%;
+ background-color: rgba(0, 0, 0, 0.7);
  color: white;
  text-align: center;
  padding: 10px 0;
  z-index: 1001; /* Z-index is now higher than the header */
 }
 .phone-bar a {
-color: white;
+ color: white;
  text-decoration: none;
  font-weight: bold;
  font-size: 1.2rem;
  display: flex;
- justify-content: center;
- align-items: center;
+  justify-content: center;
+align-items: center;
  gap: 10px;
 }
 .phone-bar a:hover {
@@ -189,8 +189,8 @@ text-decoration: underline;
 
 /* Adjusted padding for hero section to prevent overlap on mobile */
 @media (max-width: 900px) {
-.phone-bar {
- top: 60px;
+ .phone-bar {
+top: 60px;
  }
  .hero {
  padding-top: 125px; /* Increased padding to account for both header and phone bar */
@@ -466,12 +466,18 @@ display: none;
 /* Responsive */
 @media (max-width: 900px) {
   .hero-content {
-    max-width: none;
-    width: auto;
-    padding: 1.5rem 1rem;
-    top: 50%;
-    left: 0;
-    transform: translateY(-50%);
+    max-width: none; /* Resetting max-width for smaller screens */
+    width: 90%; /* Setting a specific width */
+    left: 50%; /* Center the box */
+    transform: translate(-50%, -50%); /* Center the box */
+  }
+
+  .cta-buttons {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    gap: 1rem; /* Maintain gap between buttons */
+    flex-direction: row; /* Keep buttons side-by-side */
+    flex-wrap: wrap; /* Allow buttons to wrap if needed */
   }
 
   .hero-content h1 {
