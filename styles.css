@@ -533,7 +533,7 @@ display: none;
   .about-video {
     width: 100%;
     height: auto;
-    max-height: 250px; /* A fixed height for a better visual on mobile */
+    max-height: 350px; /* A fixed height for a better visual on mobile */
     display: block;
     margin-bottom: 0.5rem; /* Small margin to separate from the text box */
   }
